@@ -23,7 +23,8 @@ const App = () => {
 				</button>
 				<button
 					onClick={() => dispatch(reset())}
-					className='btn btn-sm btn-warning'>
+					className='btn btn-sm btn-warning'
+					disabled={counter === 0}>
 					Reset
 				</button>
 			</div>
