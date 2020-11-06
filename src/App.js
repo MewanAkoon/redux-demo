@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { increment, decrement, reset } from './actions';
+import { increment, decrement, reset } from './store/counter';
 
 const App = () => {
 	const counter = useSelector(state => state.counter);
@@ -11,7 +11,7 @@ const App = () => {
 			<span className='badge badge-dark badge-pill'>{counter}</span>
 			<div className='btn-group btn-group-sm d-inline-flex ml-4'>
 				<button
-					onClick={() => dispatch(increment())}
+					onClick={() => dispatch(increment({ count: 1 }))}
 					className='btn btn-sm btn-primary'>
 					+
 				</button>
